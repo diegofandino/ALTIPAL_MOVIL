@@ -40,15 +40,16 @@ export const DrawerNavigation = () => {
       headerTitleAlign: 'center',
       headerTintColor: '#FFFFFF',
       drawerActiveBackgroundColor: '#0057d4',
-      drawerItemStyle: { display: 'flex', justifyContent: 'center', alignContent: 'center', position: 'relative' },
       drawerActiveTintColor: '#FFFFFF',
+      drawerItemStyle: {position: 'relative', paddingVertical: 10},
+      drawerLabelStyle: {position: 'absolute', marginTop: -10, left: '50%'},
       drawerInactiveTintColor: '#FFFFFF',
       headerStyle: {backgroundColor: '#0069d4'},
     }}
     initialRouteName="home"
     drawerContent={(props) => <CustomDrawerSidebar {...props} />}
     >
-      <Drawer.Screen name="home" component={HomeScreen} />
+      <Drawer.Screen  name="home" options={{ drawerLabel: 'Home' }} component={HomeScreen} />
     </Drawer.Navigator>
   );
 }
